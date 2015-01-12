@@ -1,0 +1,3 @@
+module FooPrivate {
+    export *
+}

@@ -25,10 +25,14 @@
 {
     // Here we can access the classes from Foo and check that they work:
     
-    id b = [[Baz alloc] init];
-    NSLog(@"%@", b);
-    [b doSomething];
-    
+    NSLog(@"AppDelegate");
+    id baz = [[Baz alloc] init];
+    NSLog(@"%@", baz);
+    [baz doSomething];
+
+    id bar = [[Bar alloc] init];
+    NSLog(@"%@", bar);
+
     return YES;
 }
 

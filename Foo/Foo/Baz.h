@@ -11,4 +11,7 @@
 
 
 @interface Baz : NSObject
+
+- (void)doSomething;
+
 @end

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E26E07F1A64087700E02FD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26E07E1A64087700E02FD8 /* ViewController.swift */; };
 		3E8CDBFB1A60643A001A88DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CDBFA1A60643A001A88DE /* main.m */; };
 		3E8CDBFE1A60643A001A88DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CDBFD1A60643A001A88DE /* AppDelegate.m */; };
-		3E8CDC011A60643A001A88DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CDC001A60643A001A88DE /* ViewController.m */; };
 		3E8CDC041A60643A001A88DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CDC021A60643A001A88DE /* Main.storyboard */; };
 		3E8CDC061A60643A001A88DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CDC051A60643A001A88DE /* Images.xcassets */; };
 		3E8CDC091A60643A001A88DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8CDC071A60643A001A88DE /* LaunchScreen.xib */; };
@@ -57,13 +57,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E26E07D1A64087700E02FD8 /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E26E07E1A64087700E02FD8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E8CDBF51A60643A001A88DE /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8CDBF91A60643A001A88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E8CDBFA1A60643A001A88DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E8CDBFC1A60643A001A88DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E8CDBFD1A60643A001A88DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3E8CDBFF1A60643A001A88DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3E8CDC001A60643A001A88DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3E8CDC031A60643A001A88DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E8CDC051A60643A001A88DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E8CDC081A60643A001A88DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -116,12 +116,12 @@
 			children = (
 				3E8CDBFC1A60643A001A88DE /* AppDelegate.h */,
 				3E8CDBFD1A60643A001A88DE /* AppDelegate.m */,
-				3E8CDBFF1A60643A001A88DE /* ViewController.h */,
-				3E8CDC001A60643A001A88DE /* ViewController.m */,
+				3E26E07E1A64087700E02FD8 /* ViewController.swift */,
 				3E8CDC021A60643A001A88DE /* Main.storyboard */,
 				3E8CDC051A60643A001A88DE /* Images.xcassets */,
 				3E8CDC071A60643A001A88DE /* LaunchScreen.xib */,
 				3E8CDBF81A60643A001A88DE /* Supporting Files */,
+				3E26E07D1A64087700E02FD8 /* MyApp-Bridging-Header.h */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8CDC011A60643A001A88DE /* ViewController.m in Sources */,
+				3E26E07F1A64087700E02FD8 /* ViewController.swift in Sources */,
 				3E8CDBFE1A60643A001A88DE /* AppDelegate.m in Sources */,
 				3E8CDBFB1A60643A001A88DE /* main.m in Sources */,
 			);
@@ -417,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp/MyApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -428,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp/MyApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
