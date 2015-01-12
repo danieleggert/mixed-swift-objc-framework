@@ -13,3 +13,15 @@ The sample project contains an app *MyApp* which uses a framework called *Foo*.
 The framework does its usual stuff, and in addition there's a directory called `FooPrivate` -- this is actually a module. Inside it there's a `module.modulemap` file which specifies the ObjC header files with relative paths. The framework target for `Foo` has its `SWIFT_INCLUDE_PATHS` set to `$(SRCROOT)/Foo` which is the parent directory of the `FooPrivate` directory.
 
 With this, Swift code can `import FooPrivate` and then use (private) ObjC classes.
+
+## Private Module
+
+When Swift code accesses the Foo module created by the framework, it needs to find the FooPrivate module, too.
+
+We can work around this issue by adding
+
+    module FooPrivate {
+        export *
+    }
+
+to the `.modulemap` of the framework. In Xcode this can be done by simply setting `MODULEMAP_PRIVATE_FILE` to point to a module map file with this content.
