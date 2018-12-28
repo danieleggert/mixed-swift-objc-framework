@@ -9,8 +9,6 @@
 import UIKit
 import Foo
 
-
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

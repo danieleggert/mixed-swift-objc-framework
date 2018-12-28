@@ -4,7 +4,7 @@
 
  This file lives inside a folder, and that folder is the actual module. In Xcode the SWIFT_INCLUDE_PATHS needs to include the partent directory to that folder.
  */
-module FooPrivate {
+module Foo_Private {
     header "../Norf.h"
     export *
 }
