@@ -17,12 +17,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         
-        println("ViewController")
+        print("ViewController")
         let baz = Baz()
-        println("\(baz)")
+        print("\(baz)")
         baz.doSomething()
 
         let bar = Bar()
-        println("\(bar)")
+        print("\(bar)")
     }
 }

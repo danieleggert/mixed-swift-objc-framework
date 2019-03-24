@@ -14,16 +14,16 @@ import FooPrivate
 @objc(Bar)
 public class Bar: NSObject {
    
-    public func doSomething() {
+    @objc public func doSomething() {
         // We can access Baz, which is public:
         let b = Baz()
-        println("\(b)")
+        print("\(b)")
         
         // We can also access Norf, even though it is not public:
         let n = Norf()
-        println("\(n)")
+        print("\(n)")
         
         let q = Qux()
-        println("\(q)")
+        print("\(q)")
     }
 }
