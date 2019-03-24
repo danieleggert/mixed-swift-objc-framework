@@ -1,2 +1,2 @@
 SWIFT_INCLUDE_PATHS = $(SRCROOT)/Foo
-MODULEMAP_PRIVATE_FILE = $(SRCROOT)/Foo/Foo.private.modulemap
+MODULEMAP_PRIVATE_FILE = $(SRCROOT)/Foo/Foo_Private.modulemap
